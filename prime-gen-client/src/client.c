@@ -2,7 +2,7 @@
 // Created by lucas on 8/7/15.
 //
 
-#include <libzvbi.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <client.h>
 #include <arpa/inet.h>
@@ -13,6 +13,7 @@
 #include <request.h>
 #include <reply.h>
 #include <calculator.h>
+#include <ui.h>
 
 t_client *client_new() {
     t_client * client;
@@ -43,6 +44,7 @@ void client_run(t_client * client) {
             continue;
         }
 
+        ui_set_prime_range(request);
         reply = calculator_generate_reply(request);
 
         if (send(client->socket_descriptor, &reply, sizeof(t_reply), 0) < 0) {

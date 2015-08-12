@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 2.5)
 project(prime_gen_server)
 
 find_package(Threads REQUIRED)

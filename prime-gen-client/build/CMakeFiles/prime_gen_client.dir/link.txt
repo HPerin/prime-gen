@@ -1,1 +1,0 @@
-/usr/bin/cc     CMakeFiles/prime_gen_client.dir/src/main.c.o CMakeFiles/prime_gen_client.dir/src/client.c.o CMakeFiles/prime_gen_client.dir/src/calculator.c.o  -o prime_gen_client -rdynamic 

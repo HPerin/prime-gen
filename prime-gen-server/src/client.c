@@ -2,7 +2,7 @@
 // Created by lucas on 8/7/15.
 //
 
-#include <libzvbi.h>
+#include <stdio.h>
 #include <client.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -38,7 +38,7 @@ void client_run(t_client *client) {
 
         int i;
         for (i = 0; i < reply.primes_found; i++) {
-            printf("%lu\n", reply.prime_array[i]);
+            printf("%lu - (:%d)\n", reply.prime_array[i], ntohs(client->server_socket.sin_port));
         }
 
         fflush(stdout);

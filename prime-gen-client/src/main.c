@@ -1,9 +1,12 @@
 #include <client.h>
+#include <gtk/gtk.h>
+#include <ui.h>
 
-int main() {
-    t_client * client;
-    client = client_new();
-    client_run(client);
-    client_destroy(client);
+t_ui * ui;
+
+int main(int argc, char ** argv) {
+    ui = ui_new(argc, argv);
+    ui_run(ui);
+
     return 0;
 }
